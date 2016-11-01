@@ -28,7 +28,7 @@ void loop() {
   FastLED.delay(1000/FRAMES_PER_SECOND); 
  
   // In "Idle Mode," occasionally spell out messages
-  if (!idleMode) {
+  if (idleMode) {
     int r = random(0,10000);
     if (r == 1) {
       spell("Happy Halloween");
