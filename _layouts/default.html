@@ -5,8 +5,8 @@
 <body class="preload">
     <div class="top"></div>
     <div class="profile" style="background-image: url({{ site.background }});">
-        <img src="http://www.gravatar.com/avatar/{{ site.gravatar_hash }}?s=140" class="img-circle" />
-        <h3>{{ site.name }}</h3>
+        <div class="titlebox">
+        <a href="{{ site.baseurl }}/"><h1>{{ site.name }}</h1></a>
         <p>{{ site.description }}</p>
         <ul class="social">
             {% if site.github %}
@@ -17,23 +17,16 @@
             <a type="button" href="http://twitter.com/{{ site.github }}">
                 <i class="fa fa-twitter"></i>
             </a>
-            {% endif %} {% if site.linkedin %}
-            <a type="button" href="http://linkedin.com/in/{{ site.linkedin }}">
-                <i class="fa fa-linkedin"></i>
-            </a>
-            {% endif %} {% if site.pinterest %}
-            <a type="button" href="http://pinterest.com/{{ site.pinterest }}">
-                <i class="fa fa-pinterest"></i>
-            </a>
-            {% endif %} {% if site.facebook %}
-            <a type="button" href="http://facebook.com/{{ site.facebook }}">
-                <i class="fa fa-facebook"></i>
-            </a>
             {% endif %}
         </ul>
+        </div>
     </div>
     <div class="posts">
         {{ content }}
+    </div>
+    <div class="footer">
+        <p>Content &copy; 2016-2017 Laurel Hart</p>
+        <p><a href="https://github.com/thinker3197/ink">Ink Theme</a> by <a href="https://github.com/thinker3197">thinker3197</a></p>
     </div>
 </body>
 <script type="text/javascript">

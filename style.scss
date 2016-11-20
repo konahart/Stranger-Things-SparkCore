@@ -45,7 +45,7 @@ body {
 }
 
 a {
-    color: #515151;
+    color: #00b5fb;
     text-decoration: none;
     transition: all 0.3s;
     &:hover,
@@ -317,11 +317,12 @@ tbody tr:nth-child(odd) th {
         margin: 1rem 1rem 1rem;
         display: inline;
     }
-    h3 {
+    h1 {
         height: auto;
         margin-right: 4vw;
         margin-top: 10vw;
         width: 50%;
+        text-align: center;
         float: right;
         color: #FFF;
     }
@@ -329,12 +330,19 @@ tbody tr:nth-child(odd) th {
         height: auto;
         width: 100%;
         text-align: center;
-        color: #BDBDBD;
+        color: #FFF;
+    }
+    .titlebox {
+        background-color:rgba(0, 0, 0, 0.6);
+        padding-bottom: 5%;
+        margin: 5%;
     }
     .social {
         margin-left: 25vw;
         height: auto;
         width: 100%;
+        position:relative;
+        left:25%;
     }
     @media (min-width: 38em) {
         position: fixed;
@@ -345,14 +353,13 @@ tbody tr:nth-child(odd) th {
             height: 140px;
             width: 140px;
         }
-        h3 {
+        h1 {
             text-align: center;
             float: none;
             width: 100%;
-            margin-top: -0.8em;
         }
         p {
-            margin-top: -1.3em;
+            margin-top: -.8em;
             font-size: 16px;
             text-align: center;
             letter-spacing: 2px;
@@ -364,8 +371,6 @@ tbody tr:nth-child(odd) th {
             margin-left: 24%;
         }
         .social {
-            position: absolute;
-            bottom: 0;
             margin-left: 2vw;
             a {
                 padding: 0;
@@ -381,6 +386,16 @@ tbody tr:nth-child(odd) th {
     margin-left: auto;
     margin-right: auto;
     overflow: auto;
+    h1, h2, h3 {
+        a {
+            color: #515151;
+            &:hover,
+            &:focus {
+                color: #EC407A;
+                text-decoration: dotted;
+            }
+        }
+    }
     @media (min-width: 38rem) {
         margin-top: 0;
         margin-left: 20%;
@@ -388,9 +403,18 @@ tbody tr:nth-child(odd) th {
         min-width: 80%;
         height: 800px;
     }
+    
 }
 
 .bloghead {
+    a {
+        color: #515151;
+        &:hover,
+        &:focus {
+            color: #EC407A;
+            text-decoration: dotted;
+        }
+    }
     .bloghead-title {
         span {
             color: #BDBDBD;
@@ -414,6 +438,16 @@ tbody tr:nth-child(odd) th {
             }
         }
     }
+}
+
+.footer {
+    color:#BBBBBB;
+}
+
+.footer p {
+    clear: both;
+    margin: 3px;
+    text-align: center;
 }
 
 .post-list {

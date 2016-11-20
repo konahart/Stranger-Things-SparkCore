@@ -9,7 +9,7 @@ github:             "konahart"
 
 disqus_shortname:   "konahart"
 
-background:         "http://apple.wallpapersfine.com/wallpapers/original/1242x2208/w-5273.jpg"
+background:         "http://i.imgur.com/kA73HiU.jpg"
 
 paginate:           5
 paginate_path:      "/page:num/"
@@ -20,10 +20,12 @@ permalink:          /:year/:month/:day/:title/
 markdown:           kramdown
 
 nav:
+  - name:           "Demos"
+    href:           "/demos"
   - name:           "About"
     href:           "/about"
   - name:           "Download"
-    href:           "/releases"
+    href:           "https://github.com/konahart/Stranger-Things-SparkCore"
 
 sass:
   style:            :compressed
