@@ -14,7 +14,7 @@ background:         "http://i.imgur.com/kA73HiU.jpg"
 paginate:           5
 paginate_path:      "/page:num/"
 
-baseurl:            ""
+baseurl:            "/Stranger-Things-SparkCore"
 permalink:          /:year/:month/:day/:title/
 
 markdown:           kramdown
