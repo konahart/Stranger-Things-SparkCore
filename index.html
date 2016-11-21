@@ -5,7 +5,7 @@ layout: default
     <a href="{{ site.baseurl }}/"><h1>{{ site.name }}</h1></a>
     <nav class="bloghead-nav">
         {% for nav in site.nav %}
-        <a href="{{ nav.href }}">{{ nav.name }}<span> &nbsp;/&nbsp; </span></a> {% endfor %}
+        <a href="{{ site.baseurl }}{{ nav.href }}">{{ nav.name }}<span> &nbsp;/&nbsp; </span></a> {% endfor %}
     </nav>
 </header>
 <div class="content">
