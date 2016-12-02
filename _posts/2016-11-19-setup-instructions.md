@@ -7,15 +7,17 @@ author:       "konahart"
 ### Hardware:
  - Lights
  - Power supply for lights
- - Lights to power supply
- - Jack adapters
- - Spark Core Power supply for Spark Core
+ - Power supply jack adapters for lights
+ - Microcontroller (Spark Core/Photon)
+ - Power supply for microcontroller
+
+For more detail about what hardware to get, see the [Parts Guide](/2016/12/01/parts-guide/). For this tutorial, I will assume you are using a Spark Core/Photon. You may need to adjust some steps to set up other types of microcontrollers.
 
 ### Miscellaneous Materials:
 - Black paper for letters (I used 13 9”x12” sheets)
 - Scissors for cutting out letters and/or stripping wires
 - Glasses screwdriver or small screwdriver
-- Materials for mounting letters and lights (I used painter’s tape)
+- Materials for mounting letters and lights (I used painter's tape)
 - 22 AWG wire (optional)
 - Extension cord with multiple outlets (optional)
 
@@ -59,7 +61,7 @@ Connect the data wire to Pin 6 in the breadboard the Core is mounted on. Connect
     </tr>
 </table>
 
-Alternately, you can use 2 lengths of wire from the Spark Core kit. The color doesn’t really matter, but it is helpful for them to be different colors from one another. Insert these into the adapter that was already on the light string. As above, connect the data wire to Pin 6 and the ground to either of the ground (GND) slots.
+Alternately, you can use 2 lengths of jump wire from the Spark Core kit. The color does not really matter, but it is helpful for them to be different colors from one another. Insert these into the adapter that was already on the light string. As above, connect the data wire to Pin 6 and the ground to either of the ground (GND) slots.
 
 <div align="center">
 <img src="http://i.imgur.com/2Mhsycq.jpg" alt="22 AWG wire connecting Spark Core" width="500px" />
@@ -76,7 +78,7 @@ The easy part of connecting multiple lights is simply connecting the data/ground
 
  use the same DC jack adapters you used to connect to the power source to connect the two strings. Additionally, if you make sure both strings have a female adapter, you can power each string independently. Yay flexibility! 
 
-> I found it convenient to plug both lights and Spark Core into an extension cord. This gave both greater flexibility with placement, as well as ensuring that both were unplugged at once -- the Core wasn’t left on all night sending data to unplugged lights, and the lights weren’t plugged in all night waiting for data from the unplugged Core. 
+> I found it convenient to plug both lights and Spark Core into an extension cord. This gave both greater flexibility with placement, as well as ensuring that both were unplugged at once -- the Core was not left on all night sending data to unplugged lights, and the lights were not plugged in all night waiting for data from the unplugged Core. 
 
 The wiring is done, so you may now plug in the lights and Core.
 
@@ -84,17 +86,17 @@ The wiring is done, so you may now plug in the lights and Core.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qskZZQ_09IM" frameborder="0" allowfullscreen></iframe>
 </div>
 
->If you haven't yet set up your Spark Core, it may be in [Listening Mode](https://docs.particle.io/guide/getting-started/modes/core/#listening-mode) (blinking blue) instead of [Connected Mode](https://docs.particle.io/guide/getting-started/modes/core/#connected) (breathing cyan). 
+>If you have not yet set up your Spark Core, it may be in [Listening Mode](https://docs.particle.io/guide/getting-started/modes/core/#listening-mode) (blinking blue) instead of [Connected Mode](https://docs.particle.io/guide/getting-started/modes/core/#connected) (breathing cyan). 
 
 ## Step 2: Set up Spark Core
 
 ### Set up your Core
-If you’re starting with a new Spark Core, I recommend checking out [Particle’s Getting Started Guide](https://docs.particle.io/guide/getting-started/start/core/). That will lead you through a few simple exercises, and get you familiar with the [Particle CLI](https://docs.particle.io/guide/getting-started/connect/core/) and [Web IDE](https://docs.particle.io/guide/getting-started/build/core/).  
+If you are starting with a new Spark Core, I recommend checking out [Particle's Getting Started Guide](https://docs.particle.io/guide/getting-started/start/core/). That will lead you through a few simple exercises, and get you familiar with the [Particle CLI](https://docs.particle.io/guide/getting-started/connect/core/) and [Web IDE](https://docs.particle.io/guide/getting-started/build/core/).  
 
 > I had some trouble setting up using just the Particle App, so I ended up heavily preferring connecting via USB and using the Particle CLI.
 
 ### Set up the Stranger Lights App
-Once you're familiar with your Spark Core, you can set up a new Stranger Things Lights App by copy and pasting the code from *stranger-things.ino* into the Particle Web IDE. 
+Once you are familiar with your Spark Core, you can set up a new Stranger Things Lights App by copy and pasting the code from *stranger-things.ino* into the Particle Web IDE. 
 
 <div align="center">
 <img src="http://i.imgur.com/hG0PIVR.png" alt="Screenshot of Particle Build" width="700px" />
@@ -114,18 +116,18 @@ If the flash is not successful, look at the bottom of the right side panel to fi
 ## Step 3: Create alphabet
 
 ### Make the letters
-You could make the letters in a variety of ways: print them onto regular sheets of paper; paint them yourself; or if you’re feeling bold, paint them directly onto the wall.
+You could make the letters in a variety of ways: print them onto regular sheets of paper; paint them yourself; or if you are feeling bold, paint them directly onto the wall.
 
-I followed the method bxl4662 suggested, which is printing and cutting out the [Something Strange font](http://www.dafont.com/something-strange.font) from [DaFont](http://www.dafont.com/something-strange.font). I have access to a paper cutting machine and will take any opportunity to use it, so I semi-automated this step by using Inkscape to fit 2 letters per 9”x12” sheet of black paper (somewhere around 650 pt font) and having the machine cut the SVGs directly. 
+I followed the method [another Stranger Things lights project](http://www.instructables.com/id/Arduino-Based-Stranger-Things-Lights) suggested, which is printing and cutting out the [Something Strange font](http://www.dafont.com/something-strange.font) from [DaFont](http://www.dafont.com/something-strange.font). I have access to a paper cutting machine and will take any opportunity to use it, so I semi-automated this step by using Inkscape to fit 2 letters per 9”x12” sheet of black paper (somewhere around 650 pt font) and having the machine cut the SVGs directly. 
 
 You can always do it the old fashioned way and print and cut the letters by hand. If you have good eyesight, you could try printing on black paper to save a little of that expensive toner.
 
-Since the LEDs are close to the letters, a neat addition would be to apply a layer of paint on top to get a good streaky brush stroke effect. Unfortunately, I didn’t have the time to do so. If you do so, be sure to use heavy enough paper that it won't get too warped by the paint.
+Since the LEDs are close to the letters, a neat addition would be to apply a layer of paint on top to get a good streaky brush stroke effect. Unfortunately, I did not have the time to do so. If you do so, be sure to use heavy enough paper that it will not get too warped by the paint.
 
 ### Hang the letters and lights
 Painters tape in a loop works perfectly to attach the letters to the wall. I suggest hanging the outer letters first (A and H for the first row, I and Q for the second row, and R and Z for the third row) and placing the rest of the letters from there. Be sure to leave enough room between the rows for the lights. 
 
-Don't get too worried about making everything level and evenly-spaced; a) it will be hard to notice once the lights go up, and b) the more it looks like it was done in a panic, the better. 
+Do not get too worried about making everything level and evenly-spaced; a) it will be hard to notice once the lights go up, and b) the more it looks like it was done in a panic, the better. 
 
 > One distinct visual element of the alphabet in Stranger Things is the extra space between the Q and the other letters. 
 
@@ -136,7 +138,7 @@ Don't get too worried about making everything level and evenly-spaced; a) it wil
 As for hanging the lights themselves, I initially planned to use some Command hooks. However, once I started using painters tape to  "prototype" where the hooks should go, I found that this had the right slapdash look by itself. 
 
 ## Step 4: Associate letters with numbers
-This and cutting out the letters are tied for the dubious title of "most tedious task." Essentially, you have to let the software know which LED it should illuminate when you want a particular letter. I'm working on adding tools to make this part less annoying, but if you have suggestions, do not hesitate to contact me!
+This and cutting out the letters are tied for the dubious title of "most tedious task." Essentially, you have to let the software know which LED it should illuminate when you want a particular letter. I am working on adding tools to make this part less annoying, but if you have suggestions, do not hesitate to contact me!
 
 ### Provide your device id and access token
 In order to take control of your lights, you must provide your device id and access token. You can use any of the *webControl* scripts provided (.html, .js, or .sh). Just save them on your machine and edit the text so that "your-device-ID-goes-here" is replaced with your [Device ID](https://docs.particle.io/guide/getting-started/build/photon/#account-information) and "your-access-token-goes-here" is replaced with your [Access Token](https://docs.particle.io/guide/getting-started/build/photon/#web-ide). 
