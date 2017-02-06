@@ -19,11 +19,13 @@ permalink:          /:year/:month/:day/:title/
 
 markdown:           kramdown
 
-nav:
+rel-nav:
   - name:           "Demos"
-    href:           "/demos"
+    href:           "demos"
   - name:           "About"
-    href:           "/about"
+    href:           "about"
+    
+abs-nav:
   - name:           "Download"
     href:           "https://github.com/konahart/Stranger-Things-SparkCore"
 
